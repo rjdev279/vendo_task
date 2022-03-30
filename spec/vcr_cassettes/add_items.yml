@@ -1,0 +1,67 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://demo.spreecommerce.org/api/v2/storefront/cart/add_item?private_metadata=%7B:recommended_by_us=%3Efalse%7D&public_metadata=%7B:first_item_order=%3Etrue%7D&quantity=5&variant_id=1
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - demo.spreecommerce.org
+      Content-Type:
+      - application/vnd.api+json
+      X-Spree-Order-Token:
+      - DZGNyltYC7Jl5wyTVtpONQ1648359182006
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/vnd.api+json; charset=utf-8
+      Etag:
+      - W/"d6ac7ff870969c7c2b107fe1102bf988"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - af9d3104-7de9-442a-9e56-1ec95492d704
+      X-Runtime:
+      - '0.177236'
+      Date:
+      - Sun, 27 Mar 2022 09:18:01 GMT
+      X-Rack-Cache:
+      - invalidate, pass
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"13442","type":"cart","attributes":{"number":"R168700706","item_total":"304.95","total":"304.95","ship_total":"0.0","adjustment_total":"0.0","created_at":"2022-03-27T00:33:02.013-05:00","updated_at":"2022-03-27T04:18:01.544-05:00","completed_at":null,"included_tax_total":"0.0","additional_tax_total":"0.0","display_additional_tax_total":"$0.00","display_included_tax_total":"$0.00","tax_total":"0.0","currency":"USD","state":"cart","token":"DZGNyltYC7Jl5wyTVtpONQ1648359182006","email":null,"display_item_total":"$304.95","display_ship_total":"$0.00","display_adjustment_total":"$0.00","display_tax_total":"$0.00","promo_total":"0.0","display_promo_total":"$0.00","item_count":5,"special_instructions":null,"display_total":"$304.95","pre_tax_item_amount":"304.95","display_pre_tax_item_amount":"$304.95","pre_tax_total":"304.95","display_pre_tax_total":"$304.95","shipment_state":null,"payment_state":null},"relationships":{"line_items":{"data":[{"id":"7007","type":"line_item"}]},"variants":{"data":[{"id":"1","type":"variant"}]},"promotions":{"data":[]},"payments":{"data":[]},"shipments":{"data":[]},"user":{"data":null},"billing_address":{"data":null},"shipping_address":{"data":null}}}}'
+  recorded_at: Sun, 27 Mar 2022 09:17:59 GMT
+recorded_with: VCR 6.1.0

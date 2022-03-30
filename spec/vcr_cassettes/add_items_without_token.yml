@@ -1,0 +1,65 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://demo.spreecommerce.org/api/v2/storefront/cart/add_item?private_metadata=%7B:recommended_by_us=%3Efalse%7D&public_metadata=%7B:first_item_order=%3Etrue%7D&quantity=5&variant_id=1
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - demo.spreecommerce.org
+      Content-Type:
+      - application/vnd.api+json
+      X-Spree-Order-Token:
+      - '123'
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Server:
+      - Cowboy
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/vnd.api+json; charset=utf-8
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - 9d41e079-813b-498f-ae26-183a60c2cae5
+      X-Runtime:
+      - '0.009195'
+      Date:
+      - Sun, 27 Mar 2022 09:29:47 GMT
+      X-Rack-Cache:
+      - invalidate, pass
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"error":"The resource you were looking for could not be found."}'
+  recorded_at: Sun, 27 Mar 2022 09:29:45 GMT
+recorded_with: VCR 6.1.0
