@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby
+require 'dotenv/load'
+
+puts "=============Calling Spreecommerce=============="
+# Intialize the ticket
+puts "==============Creating Cart=============="
+# Create cart
+puts "==============Adding item to the Cart=============="
+# Add item to the cart
