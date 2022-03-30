@@ -19,7 +19,7 @@ module Api
         uri = URI "#{ENV['BASE_URL']}/#{path}"
         uri.query = URI.encode_www_form(params)
         request = http_namespace(action).new(uri)
-        request_headers(request, token)
+        headers(request, token)
         request_response = http_response(request, true)
         response = request_response.value || request_response
         parsed_response(response)
@@ -27,7 +27,9 @@ module Api
         { 'error' => "#{e.class}: #{e.message}" }
       end
 
-      def request_headers(request, token)
+      private
+
+      def headers(request, token)
         request['Content-Type'] = 'application/vnd.api+json'
         request['X-Spree-Order-Token'] = token unless token.nil?
       end
