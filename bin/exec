@@ -1,9 +1,19 @@
 #!/usr/bin/env ruby
+require_relative '../lib/api/spree_commerce/client'
 require 'dotenv/load'
 
 puts "=============Calling Spreecommerce=============="
-# Intialize the ticket
+client = Api::SpreeCommerce::Client.new
 puts "==============Creating Cart=============="
-# Create cart
+puts create_cart = client.create_cart
 puts "==============Adding item to the Cart=============="
-# Add item to the cart
+puts client.add_items(create_cart['data']['attributes']['token'], {
+  variant_id: '1',
+  quantity: 5,
+  public_metadata: {
+    first_item_order: true
+  },
+  private_metadata: {
+    recommended_by_us: false
+  }
+})
